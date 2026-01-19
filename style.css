@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background: #f4f6f8;
+  }
+  
+  header {
+    background: #2563eb;
+    color: white;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .screen {
+    display: none;
+  }
+  
+  .screen.active {
+    display: block;
+  }
+  
+  #searchInput {
+    width: 95%;
+    margin: 10px auto;
+    display: block;
+    padding: 10px;
+  }
+  
+  #noteEditor {
+    padding: 10px;
+  }
+  
+  #noteEditor input,
+  #noteEditor textarea,
+  #noteEditor select,
+  #noteEditor button {
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 10px;
+  }
+  
+  .note {
+    background: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .note img {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    display: flex;
+    border-top: 1px solid #ddd;
+  }
+  
+  .bottom-nav button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    background: none;
+    font-size: 16px;
+  }
+  
+  /* MODAL */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+  }
+  
+  .modal-content {
+    background: white;
+    margin: 10% auto;
+    padding: 15px;
+    width: 90%;
+    border-radius: 8px;
+  }
+  
+  .modal-content img {
+    max-width: 100%;
+  }
+  

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Take Notes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Take Notes</h1>
+</header>
+
+<!-- HOME SCREEN -->
+<section id="homeScreen" class="screen active">
+
+  <input type="text" id="searchInput" placeholder="Search notes...">
+
+  <div id="noteEditor">
+    <input type="text" id="noteTitle" placeholder="Note title">
+    <textarea id="noteText" placeholder="Write your note..."></textarea>
+
+    <select id="noteCategory">
+      <option value="work">Work</option>
+      <option value="personal">Personal</option>
+      <option value="school">School</option>
+      <option value="ideas">Ideas</option>
+    </select>
+
+    <input type="file" id="imageInput" accept="image/*">
+    <input type="password" id="noteLock" placeholder="Optional PIN to lock">
+
+    <button id="saveBtn">Save Note</button>
+  </div>
+
+  <div id="notesContainer"></div>
+</section>
+
+<!-- SAVED SCREEN -->
+<section id="savedScreen" class="screen">
+  <h2 class="section-title">Saved Notes</h2>
+  <div id="savedContainer"></div>
+</section>
+
+<!-- NOTE VIEW MODAL -->
+<div id="noteModal" class="modal">
+  <div class="modal-content">
+    <h3 id="modalTitle"></h3>
+    <p id="modalText"></p>
+    <img id="modalImage">
+
+    <div class="note-actions">
+      <button onclick="editOpenedNote()">✏ Edit</button>
+      <button onclick="deleteOpenedNote()">🗑 Delete</button>
+      <button onclick="shareOpenedNote()">📤 Share</button>
+      <button onclick="exportOpenedPDF()">📄 PDF</button>
+      <button onclick="closeModal()">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
+  <button onclick="showHome()">🏠 Home</button>
+  <button onclick="showSaved()">💾 Saved</button>
+</nav>
+
+<script src="html2pdf.bundle.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
